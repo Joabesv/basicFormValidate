@@ -8,15 +8,19 @@
   </head>
 
   <body>
-    <form method="POST" action="">
-      <input type="email" name="email" id="email" placeholder="email" /><br />
-      <input type="text" name="name" id="name" placeholder="name" /><br />
+    <form method="POST" action="/form">
       <input
-        type="number"
-        name="points"
-        id="points"
-        placeholder="points"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email"
+        value="<%= email %> "
       /><br />
+      <%= emailErr %><br />
+      <input type="text" name="name" id="name" placeholder="name" /><br />
+      <%= nameErr %><br />
+      <input type="number" name="points" id="points" placeholder="points" />
+      <%= pointsErr %><br />
       <button type="submit">Enviar</button>
     </form>
   </body>
